@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipo Inalámbrico de Monitoreo de Calidad de Agua de Riego en Canales Usando Tecnología LoRa y 2G </title>
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Gauge.js para medidores -->
+    <script src="https://cdn.jsdelivr.net/npm/gauge.js@2.1.0/dist/gauge.min.js"></script>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Botón volver arriba -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Notificación -->
+    <div class="notification" id="notification"></div>
+
+    <!-- Modal para galería -->
+    <div id="imageModal" class="modal">
+    <span class="close" id="closeModal">&times;</span>
+    <img class="modal-content" id="modalImage" src="imagenes/IMG20250517091858.jpg" alt="Descripción de la imagen">
+</div>
+
+    <!-- Header -->
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <img src="imagenes/logo.jpg" alt="Logo" class="logo-img">
+            <span>HidroEye</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#prototipo">Prototipo</a></li>
+                <li><a href="#materiales">Materiales</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#dashboards">Dashboards</a></li>
+                <li><a href="#datos">Datos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+                <h1> "Prototipo Inalámbrico de Monitoreo de Calidad del Agua de Canales de Riego Usando Tecnología  LoRa y 2G"</h1>
+        <p>Vigilancia inteligente para cuerpos de agua</p>
+        <a href="#prototipo" class="btn">Conoce más</a>
+    </section>
+
+    <!-- Descripción del Prototipo -->
+    <section id="prototipo" class="container">
+        <h2 class="section-title">Descripción del Prototipo</h2>
+        <div class="prototipo-info">
+            <div class="prototipo-text">
+                <h3> "Prototipo Inalámbrico de Monitoreo de Calidad del Agua de Canales de Riego Usando Tecnología  LoRa y 2G"</h3>
+                <P>Este prototipo es de monitoreo IoT diseñado para medir en tiempo real la calidad del agua de riego en entornos agrícolas. Utiliza una placa LoRa 32 como unidad sensora y un módulo SIM7000 para el envío de datos mediante la red 2G, garantizando conectividad incluso en zonas rurales sin acceso a internet tradicional. 
+                    La información recolectada se transmite a la nube, donde se almacena en InfluxDB y se visualiza mediante dashboards.</P>
+                <p>Las principales características del prototipo incluyen:</p>
+                <ul>
+                    <li>Medición en tiempo real de parámetros como pH, turbidez y temperatura.</li>
+                    <li>Transmisión autónoma de datos solo cuando hay nuevas lecturas.</li>
+                    <li>Energía solar como fuente principal de alimentación.</li>
+                    <li>Almacenamiento en la nube (InfluxDB) para registros históricos.</li>
+                    <li>Visualización web interactiva mediante dashboards.</li>
+                    <li>Instalación sencilla y operación sin conocimientos técnicos.</li>
+                </ul>
+                <p>El prototipo es ideal para aplicaciones de monitoreo ambiental, domótica, agricultura inteligente, y cualquier escenario que requiera la recolección y análisis de datos de sensores.</p>
+            </div>
+            <div class="prototipo-image">
+                <img src="imagenes/prototipo bien.jpg" alt="Prototipo ">
+            </div>
+        </div>
+    </section>
+
+    <!-- Materiales -->
+    <section id="materiales" class="container">
+        <h2 class="section-title">Materiales Utilizados</h2>
+        <div class="materiales-container">
+            <!-- Material 1 -->
+            <div class="material-card">
+                <div class="material-img">
+                    <img src="imagenes/lora.jpg" alt="Raspberry Pi 4">
+                </div>
+                <div class="material-info">
+                    <h3>LoRa ESP32 v2 </h3>
+                    <p>Permite la comunicación de largo alcance a baja potencia. Es útil para proyectos que requieren transmisión de datos en áreas extensas, como monitoreo ambiental o agrícola.</p>
+                    <a href="https://www.amazon.com.mx/MakerFocus-Development-Bluetooth-0-96inch-Display/dp/B076MSLFC9/ref=asc_df_B076MSLFC9?mcid=2eb3016fe86e3ed48ce0ba665f83b578&tag=gledskshopmx-20&linkCode=df0&hvadid=709903297663&hvpos=&hvnetw=g&hvrand=12814759002716387559&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9073798&hvtargid=pla-570414542843&psc=1&language=es_MX&gad_source=1" target="_blank">Comprar aquí</a>               
+                 </div>
+            </div>
+            <!-- Material 2 -->
+            <div class="material-card">
+                <div class="material-img">
+                    <img src="imagenes/lilygo.jpg" alt="Sensores DHT22">
+                </div>
+                <div class="material-info">
+                    <h3>lilygo SIM7000</h3>
+                    <p>Permite la transmisión de datos a través de redes celulares. Es ideal para proyectos de IoT donde se necesita enviar información desde ubicaciones remotas sin conexión Wi-Fi.</p>
+                    <a href="https://www.amazon.com.mx/LILYGO-desarrollo-ESP32-WROVER-B-inal%C3%A1mbrico-T-SIM7000G/dp/B099RQ7BSR" target="_blank">Comprar aquí</a>
+                </div>
+
+            </div>
+            <!-- Material 3 -->
+            <div class="material-card">
+                <div class="material-img">
+                    <img src="imagenes/ph.jpg" alt="Sensor BMP280">
+                </div>
+                <div class="material-info">
+                    <h3>Sensor Ph</h3>
+                    <p> Esencial para monitorear la calidad del agua en sistemas de riego, acuicultura y laboratorios. Ayuda a garantizar que los niveles de pH sean adecuados para las plantas y organismos acuáticos.</p>
+                    <a href="https://www.amazon.com.mx/PH-4502C-Sensor-Liquido-electrodo-E201-BNC/dp/B09MSSPR8Q/ref=sr_1_6?dib=eyJ2IjoiMSJ9.tj6Yu-Y3G_dcrBtvwjwwK9buPmsum_iP3D9_BbEGePykuAudVdNnM9-avq5OHYybmWuWu32Mq0TK01A982pS14JiMuixr0gMvX-jLQwcH5ybBuZdDvGKeQxx79piT7gtrgSDzVonI-kV3znC_E4_IZKJjAwPLQyjWehKSjjhSJOa6fMZCagi6JDO6w28_PPtLiCaSU2nUX9_IN3d1h3ViWTPLoKe8QFwtGobJE0sONO3O2QkyORExNN_K8MNrwaqpjNWknIQ73cyYzsGPHHIp02K2uZhHvtkmQafTpSE6oo.zIP1y4cFZcsBdZwSqt9meGy3FSSkg37Fu5NB9_S1hKk&dib_tag=se&keywords=SENSOR+DE+PH&qid=1747661998&sr=8-6&ufe=app_do%3Aamzn1.fos.de93fa6a-174c-4df7-be7c-5bc8e9c5a71b" target="_blank">Comprar aquí</a>
+                </div>
+            </div>
+            <!-- Material 4 -->
+            <div class="material-card">
+                <div class="material-img">
+                    <img src="imagenes/temperatura.webp" alt="Módulo Relé">
+                </div>
+                <div class="material-info">
+                    <h3>Sensor de temperatura</h3>
+                    <p>Útil para monitorear condiciones ambientales. En sistemas de riego, ayuda a optimizar el uso del agua y a garantizar el bienestar de las plantas.</p>
+                    <a href="https://www.amazon.com.mx/DGZZI-temperatura-inoxidable-encapsulado-resistente/dp/B07PRWTLS1/ref=sr_1_7?crid=1K57KJC13SE6Y&dib=eyJ2IjoiMSJ9.ZQxfmlQyOAVP1ArMEPyV6qbkKY5I3ORZ9DbCJg7tcEM7rG5ACV21FdWLyYKYRO3fR20CWanY_bJmdbL6i892LMpsx-RdA1bfog1eH6DfZw1IEQbtOvwbWV45CD3sQBTA4s_obTcpSEty-ZJrjJsczZpNubbvEpDTk3QHzY-648p__Sf9RvUR_Z8kTpkiU_8A63CJFG3vxRQWuP8zSYbpHu66hhwMeCGJ7wZ1dEF3T6yC8rJ4iVYfg2PGT6QXStZKPOO4tVKRxr4zS3LApsijgLI-hnEuttTIJSJuYLaM6V4.sWjvZWzzLK1xWSOqUmfhIaxtrZq2QLCsKVoPcVkynhA&dib_tag=se&keywords=sensor+de+temperatura&qid=1747662045&sprefix=sensor+de+TEM%2Caps%2C181&sr=8-7&ufe=app_do%3Aamzn1.fos.de93fa6a-174c-4df7-be7c-5bc8e9c5a71b" target="_blank">Comprar aquí</a>
+                </div>
+            </div>
+            <!-- Material 5 -->
+            <div class="material-card">
+                <div class="material-img">
+                    <img src="imagenes/turbidez.jpg" alt="Pantalla LCD">
+                </div>
+                <div class="material-info">
+                    <h3>Sensor de Turbidez</h3>
+                    <p>Indica la cantidad de partículas suspendidas en el agua. Es importante para evaluar la calidad del agua en aplicaciones agrícolas y medioambientales, asegurando que el agua utilizada sea adecuada.</p>
+                    <a href="https://www.amazon.com.mx/gp/aw/d/B0D1DGZ444/?_encoding=UTF8&pd_rd_plhdr=t&aaxitk=0626d3db35c233b6bdb45cebef982e98&hsa_cr_id=0&qid=1747662071&sr=1-1-9e67e56a-6f64-441f-a281-df67fc737124&ref_=sbx_be_s_sparkle_dlcd_asin_0_img&pd_rd_w=AIInp&content-id=amzn1.sym.c71f37f1-e5e0-47aa-86b4-8b7aabdeef50%3Aamzn1.sym.c71f37f1-e5e0-47aa-86b4-8b7aabdeef50&pf_rd_p=c71f37f1-e5e0-47aa-86b4-8b7aabdeef50&pf_rd_r=0CD2TQJ8BKD29TJ7GSY7&pd_rd_wg=oHjRG&pd_rd_r=d20c5c04-91d1-4077-ac41-2bc9bf90db2b" target="_blank">Comprar aquí</a>
+                </div>
+            </div>
+        
+        </div>
+    </section>
+
+   <section id="instructivo" class="container">
+    <h2 class="section-title">Instructivo de Uso</h2>
+    <div class="instructivo-content">
+        <h3>Pasos para Usar el Prototipo</h3>
+        <p>Este instructivo te guiará a través de los pasos necesarios para configurar y utilizar tu prototipo de monitoreo de calidad de agua. Asegúrate de seguir cada paso cuidadosamente para garantizar un funcionamiento óptimo.</p>
+        <ol class="instructivo-list">
+            <li>
+                <strong>Colocación:</strong>
+                <p>Poner el prototipo en un lugar estable, donde el agua cubra correctamente los sensores y donde le dé el sol. Asegúrate de que no haya obstáculos que puedan interferir con la señal.</p>
+            </li>
+            <li>
+                <strong>Activación del Transmisor:</strong>
+                <p>Ver que prenda la pantalla donde aparezca "LoRa transmisora: Datos enviados". Esto indica que el módulo está funcionando correctamente y enviando datos.</p>
+            </li>
+            <li>
+                <strong>Activación del Receptor:</strong>
+                <p>Encender la otra LoRa receptora y visualizar la pantalla donde aparezca "LoRa receptora: Datos recibidos". Esto confirmará que los datos están siendo recibidos correctamente.</p>
+            </li>
+            <li>
+                <strong>Encender LilyGO:</strong>
+                <p>Prender la LilyGO y esperar a que conecte a la red durante aproximadamente 10 minutos. Asegúrate de que el SIM tenga crédito suficiente para enviar datos a la nube.</p>
+            </li>
+            <li>
+                <strong>Verificación del Dashboard:</strong>
+                <p>Accede al dashboard en la página web proporcionada. Verifica que todos los parámetros se estén actualizando correctamente. Esto te permitirá monitorear la calidad del agua en tiempo real.</p>
+            </li>
+            <li>
+                <strong>Mantenimiento Regular:</strong>
+                <p>Realiza chequeos periódicos del sistema para asegurarte de que los sensores estén limpios y funcionando correctamente. Reemplaza cualquier componente que muestre signos de desgaste.</p>
+            </li>
+            <li>
+                <strong>Solución de Problemas:</strong>
+                <p>Si encuentras problemas, revisa las conexiones y asegúrate de que todos los dispositivos estén encendidos. Consulta el manual del usuario para obtener más información sobre la solución de problemas.</p>
+            </li>
+        </ol>
+        <p>Siguiendo estos pasos, podrás aprovechar al máximo tu prototipo y garantizar un monitoreo efectivo de la calidad del agua de riego.</p>
+    </div>
+</section>
+
+    <!-- Galería -->
+    <section id="galeria" class="container">
+        <h2 class="section-title">Galería del Prototipo</h2>
+        <div class="gallery">
+            <!-- Imagen 1 -->
+            <div class="gallery-item">
+                <img src="imagenes/prototipo bien.jpg" alt="Vista frontal del prototipo">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <!-- Imagen 2 -->
+            <div class="gallery-item">
+                <img src="imagenes/IMG20250517091145.jpg" >
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <!-- Imagen 3 -->
+            <div class="gallery-item">
+                <img src="imagenes/IMG20250517095141.jpg" alt="Montaje en caja protectora">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <!-- Imagen 4 -->
+            <div class="gallery-item">
+                <img src="imagenes/IMG20250517091858.jpg" alt="Flujo de Node-RED">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <!-- Imagen 5 -->
+            <div class="gallery-item">
+                <img src="imagenes/IMG20250517091157.jpg" alt="Dashboard de datos">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <!-- Imagen 6 -->
+            <div class="gallery-item">
+                <img src="imagenes/IMG20250517091212.jpg" alt="Instalación en campo">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <!-- Imagen 7 -->
+            <div class="gallery-item">
+                <img src="imagenes/IMG20250517091849.jpg" alt="Pruebas de funcionamiento">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <!-- Imagen 8 -->
+            <div class="gallery-item">
+                <img src="imagenes/IMG20250517091308.jpg" alt="Detalle de conexiones">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Dashboards -->
+<section class="dashboard-container">
+  <h2 class="dashboard-title">Dashboards</h2>
+  <div class="dashboard-tabs">
+    <button class="dashboard-tab active">Node-RED Dashboard</button>
+  </div>
+  <div class="dashboard-content active">
+    <iframe class="dashboard-node-red" src="http://192.168.137.206:1880/ui"></iframe>
+  </div>
+</section>
+
+            
+   
+
+    <!-- Contacto -->
+    <section id="contacto" class="container">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Información de Contacto</h3>
+                <div class="contact-info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Ubicación</h4>
+                        <p>7ma Demarcación, 42700 Mixquiahuala, Hgo.</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>HidroEye@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Teléfono</h4>
+                        <p>+52 772 131 2075</p>
+                    </div>
+                </div>
+                <div class="contact-info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Horario</h4>
+                        <p>Lunes - Viernes: 9:00 AM - 5:00 PM</p>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Envíanos un Mensaje</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>HidroEye</h3>
+                <p>"Prototipo Inalámbrico de Monitoreo de Calidad del Agua de Canales de Riego Usando Tecnología LoRa y 2G"</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#prototipo">Prototipo</a></li>
+                    <li><a href="#materiales">Materiales</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#dashboards">Dashboards</a></li>
+                    <li><a href="#datos">Datos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Suscríbete</h3>
+                <p>Recibe actualizaciones y noticias sobre el proyecto.</p>
+                    <div class="form-group">
+                        <input type="email" placeholder="Tu email" required>
+                    </div>
+                    <button type="submit" class="btn">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; HidroEye. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="js/data.js"></script>
+</body>
+</html>
