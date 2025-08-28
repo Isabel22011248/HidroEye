@@ -6,7 +6,7 @@
     --color-warning: #FFC107;
     --color-danger: #F44336;
     --color-dark: #333;
-    --color-light: #f5f5f5;
+    --color-light: #1c1c1c;
     --color-text: #212121;
     --color-text-light: #757575;
     --color-white: #ffffff;
@@ -437,7 +437,7 @@ section {
 /* Estilo del iframe */
 .dashboard-node-red {
     width: 100%;
-    height: 600px;
+    height: 800px;
     border: none;
     border-radius: 10px;
     background-color: #f9f9f9;
@@ -514,7 +514,7 @@ section {
 
 /* Gauges and indicators */
 .gauge-container {
-    width: 100%;
+    width: 1000%;
     height: 180px;
     position: relative;
 }
@@ -563,29 +563,6 @@ section {
     color: var(--color-text-light);
 }
 
-/* Control panel */
-.control-panel {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 20px;
-}
-
-.control-panel h3 {
-    margin-top: 0;
-    margin-bottom: 15px;
-    color: var(--color-dark);
-}
-
-.control-group {
-    margin-bottom: 15px;
-}
-
-.control-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 500;
-}
 
 .switch {
     position: relative;
@@ -655,7 +632,7 @@ input:checked + .slider:before {
 /* Iframe container for Node-RED dashboard */
 .node-red-container {
     width: 100%;
-    height: 800px;
+    height: 1000px;
     border: none;
 }
 
@@ -688,7 +665,7 @@ input:checked + .slider:before {
     flex: 1;
     min-width: 300px;
     background-color: var(--color-white);
-    padding: 30px;
+    padding: 50px;
     border-radius: 8px;
     box-shadow: var(--shadow);
 }
@@ -726,17 +703,18 @@ input:checked + .slider:before {
 footer {
     background-color: var(--color-dark);
     color: var(--color-white);
-    padding: 40px 0 20px;
+    padding: 100px 0 20px;
+    width: 100%;
 }
 
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 30px;
+    gap: 70px;
 }
 
 .footer-section {
@@ -914,4 +892,18 @@ footer {
 .notification.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Ajustar imágenes del carrusel */
+#animalCarousel .carousel-item img {
+  max-height: 500px;   /* altura máxima del carrusel */
+  object-fit: cover;   /* recorta sin deformar */
+  width: 100%;         /* ocupa el ancho */
+  border-radius: 15px; /* esquinas redondeadas (opcional) */
+}
+
+.carousel-caption h5 {
+    color: #c77461; /* Cambia este código por el color que desees */
+    font-weight: bold; /* Opcional: hace que el texto sea más visible */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Opcional: mejora la legibilidad sobre la imagen */
 }

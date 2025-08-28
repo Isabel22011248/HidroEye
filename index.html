@@ -12,6 +12,10 @@
     <script src="https://cdn.jsdelivr.net/npm/gauge.js@2.1.0/dist/gauge.min.js"></script>
     <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/styles.css">
+     <link href="/root/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
 </head>
 <body>
     <!-- Botón volver arriba -->
@@ -38,7 +42,7 @@
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#prototipo">Prototipo</a></li>
+                <li><a href="#prototipo">Sistema</a></li>
                 <li><a href="#materiales">Materiales</a></li>
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#dashboards">Dashboards</a></li>
@@ -49,20 +53,49 @@
     </div>
 </header>
 
+ <!-- Carrusel de animales -->
+  <div id="animalCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#animalCarousel" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#animalCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#animalCarousel" data-bs-slide-to="2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="1000">
+        <img src="imagenes/IMG20250517091145.jpg" class="d-block w-100" alt="prototipo">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>"Sistema Inalámbrico de Monitoreo de Calidad del Agua de Canales de Riego Usando Tecnología  LoRa y 2G"</h5>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="imagenes/IMG20250517091901.jpg" class="d-block w-100" alt="Caballos">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>"Sistema Inalámbrico de Monitoreo de Calidad del Agua de Canales de Riego Usando Tecnología  LoRa y 2G"</h5>
+        </div>  
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="imagenes/IMG20250517091148.jpg" class="d-block w-100" alt="Oso (ejemplo)">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>"Sistema Inalámbrico de Monitoreo de Calidad del Agua de Canales de Riego Usando Tecnología  LoRa y 2G"</h5>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#animalCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#animalCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="inicio">
-                <h1> "Prototipo Inalámbrico de Monitoreo de Calidad del Agua de Canales de Riego Usando Tecnología  LoRa y 2G"</h1>
-        <p>Vigilancia inteligente para cuerpos de agua</p>
-        <a href="#prototipo" class="btn">Conoce más</a>
-    </section>
+
 
     <!-- Descripción del Prototipo -->
     <section id="prototipo" class="container">
-        <h2 class="section-title">Descripción del Prototipo</h2>
+        <h2 class="section-title">Descripción del Sistema</h2>
         <div class="prototipo-info">
             <div class="prototipo-text">
-                <h3> "Prototipo Inalámbrico de Monitoreo de Calidad del Agua de Canales de Riego Usando Tecnología  LoRa y 2G"</h3>
+                <h3> "Sistema Inalámbrico de Monitoreo de Calidad del Agua de Canales de Riego Usando Tecnología  LoRa y 2G"</h3>
                 <P>Este prototipo es de monitoreo IoT diseñado para medir en tiempo real la calidad del agua de riego en entornos agrícolas. Utiliza una placa LoRa 32 como unidad sensora y un módulo SIM7000 para el envío de datos mediante la red 2G, garantizando conectividad incluso en zonas rurales sin acceso a internet tradicional. 
                     La información recolectada se transmite a la nube, donde se almacena en InfluxDB y se visualiza mediante dashboards.</P>
                 <p>Las principales características del prototipo incluyen:</p>
@@ -74,7 +107,7 @@
                     <li>Visualización web interactiva mediante dashboards.</li>
                     <li>Instalación sencilla y operación sin conocimientos técnicos.</li>
                 </ul>
-                <p>El prototipo es ideal para aplicaciones de monitoreo ambiental, domótica, agricultura inteligente, y cualquier escenario que requiera la recolección y análisis de datos de sensores.</p>
+                <p>El Sistema es ideal para aplicaciones de monitoreo ambiental, domótica, agricultura inteligente, y cualquier escenario que requiera la recolección y análisis de datos de sensores.</p>
             </div>
             <div class="prototipo-image">
                 <img src="imagenes/prototipo bien.jpg" alt="Prototipo ">
@@ -193,7 +226,7 @@
             <div class="gallery-item">
                 <img src="imagenes/prototipo bien.jpg" alt="Vista frontal del prototipo">
                 <div class="gallery-overlay">
-                    <i class="fas fa-search-plus"></i>
+                    <i class="“Prototipo  Inalámbrico de Monitoreo de Calidad del Agua en Canales de Riego Usando Tecnología LoRa y 2G”fas fa-search-plus"></i>
                 </div>
             </div>
             <!-- Imagen 2 -->
@@ -254,7 +287,7 @@
     <button class="dashboard-tab active">Node-RED Dashboard</button>
   </div>
   <div class="dashboard-content active">
-    <iframe class="dashboard-node-red" src="http://192.168.137.206:1880/ui/#!/0?socketid=lMWDfF1jswY5ZF3FAAAB"></iframe>
+    <iframe class="dashboard-node-red" src="http://192.168.137.206:1880/ui/#!/0?socketid=RIu35XGvaYEM6B3kAAAB"></iframe>
   </div>
 </section>
 
@@ -304,30 +337,34 @@
                 </div>
             </div>
             
-            <div class="contact-form">
-                <h3>Envíanos un Mensaje</h3>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Nombre</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Asunto</label>
-                        <input type="text" id="subject" name="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensaje</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Enviar Mensaje</button>
-                </form>
-            </div>
-        </div>
-    </section>
+   
+<section>
+  <div class="contact-form">
+    <h3>Envíanos un Mensaje</h3>
+    <form action="https://formspree.io/f/xldbywgr" method="POST">
+
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">Asunto</label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit" class="btn">Enviar Mensaje</button>
+    </form>
+  </div>
+</section>
+
+
 
     <!-- Footer -->
     <footer>
@@ -349,24 +386,15 @@
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
-            
-            <div class="footer-section">
-                <h3>Suscríbete</h3>
-                <p>Recibe actualizaciones y noticias sobre el proyecto.</p>
-                    <div class="form-group">
-                        <input type="email" placeholder="Tu email" required>
-                    </div>
-                    <button type="submit" class="btn">Suscribirse</button>
-                </form>
-            </div>
-        </div>
+
         
         <div class="copyright">
             <p>&copy; HidroEye. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
     <script src="js/main.js"></script>
     <script src="js/gallery.js"></script>
     <script src="js/dashboard.js"></script>
