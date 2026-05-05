@@ -18,5 +18,3 @@ Sistema inalámbrico de monitoreo de calidad del agua de riego usando LoRa y 4G.
 ## 📊 Aplicación
 Dirigido a agricultores del Valle del Mezquital para mejorar la calidad del agua de riego.
 
-## 📷 Evidencia
-(Aquí pones imágenes o diagramas)
